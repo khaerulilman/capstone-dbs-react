@@ -2,7 +2,6 @@ import type { PredictResponse } from "./formcheckApi";
 import { saveCheckHistory } from "./formcheckApi";
 import { useNavigate } from "react-router-dom";
 import { decodeToken } from "../../utils/decodeToken";
-import { useEffect } from "react";
 
 type ResultComponentProps = {
   result: PredictResponse;
