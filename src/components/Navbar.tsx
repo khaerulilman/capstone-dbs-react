@@ -6,8 +6,9 @@ export function Navbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.clear(); // atau removeItem satu2
-    navigate("/login");
+    localStorage.clear();
+    navigate("/login", { replace: true });
+    window.location.reload();
   };
 
   return (
