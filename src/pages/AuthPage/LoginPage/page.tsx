@@ -194,6 +194,17 @@ function LoginPage() {
                 </svg>
                 {loading ? "Loading..." : "Login"}
               </button>
+              <div className="my-4 text-center text-sm text-gray-500">atau</div>
+              <button
+                type="button"
+                onClick={() => {
+                  window.location.href = `${import.meta.env.VITE_MAIN_URL}/v1/auth/google`;
+                }}
+                className="w-full flex items-center justify-center gap-2 border rounded-lg py-2 hover:bg-gray-50"
+              >
+                <img src="/google.svg" className="w-4 h-4" />
+                Login with Google
+              </button>
             </div>
 
             <p className="mt-2 text-center text-sm text-gray-600">

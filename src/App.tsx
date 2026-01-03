@@ -9,6 +9,8 @@ import PanduanPage from "./pages/PanduanPage/page";
 import BacaanPage from "./pages/BacaanPage/page";
 import VerifyTokenPage from "./pages/AuthPage/VerifyTokenPage/page";
 import VerifyProtectedRoute from "./pages/AuthPage/VerifyProtectedRoute";
+import GoogleCompletePage from "./pages/AuthPage/GoogleComplete/page";
+import GoogleSuccessPage from "./pages/AuthPage/GoogleSuccess/page";
 import { ProfilePage } from "./pages/ProfilePage/page";
 import NotFoundPage from "./pages/NotFound/page";
 
@@ -50,6 +52,9 @@ function App() {
               </VerifyProtectedRoute>
             }
           />
+
+          <Route path="/auth/google-complete" element={<GoogleCompletePage />} />
+          <Route path="/auth/google-success" element={<GoogleSuccessPage />} />
 
           <Route
             path="/profile"

@@ -73,3 +73,7 @@ export const saveTokenToLocalStorage = (token: string) => {
     console.warn("Could not save token to localStorage:", e);
   }
 };
+
+export const completeGoogleRegister = (payload: { token: string; name: string }) => {
+  return api.post("/auth/google/complete", payload);
+};
