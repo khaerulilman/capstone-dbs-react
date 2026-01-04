@@ -55,6 +55,10 @@ export const predictHistory = async (payload: PredictColomn) => {
   }
 };
 
+export const insertUserId = async (id: string) => {
+  return api.patch(`/form-check-history/${id}`);
+};
+
 export const saveCheckHistory = (checkFormId: string) => {
   return api.patch(`/form-check-history/${checkFormId}/save`);
 };

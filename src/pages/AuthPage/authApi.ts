@@ -3,7 +3,6 @@ import api from "../../api";
 type LoginHandlerProps = {
   email: string;
   password: string;
-  idCheckForm: string | null;
 };
 
 type RegisterHandlerProps = {
@@ -33,12 +32,10 @@ type LoginResponse = {
 };
 
 export const LoginHandler = (payload: LoginHandlerProps) => {
-  const { email, password, idCheckForm } = payload;
+  const { email, password } = payload;
   const body = {
     email,
     password,
-    // backend expects `checkFormId` (as used in Postman)
-    checkFormId: idCheckForm ?? null,
   };
 
   return api.post<LoginResponse>("/login", body);
@@ -74,6 +71,9 @@ export const saveTokenToLocalStorage = (token: string) => {
   }
 };
 
-export const completeGoogleRegister = (payload: { token: string; name: string }) => {
+export const completeGoogleRegister = (payload: {
+  token: string;
+  name: string;
+}) => {
   return api.post("/auth/google/complete", payload);
 };

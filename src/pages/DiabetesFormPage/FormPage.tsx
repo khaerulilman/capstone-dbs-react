@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { PredictColomn } from "./formProps";
 import { predictHistory } from "./formcheckApi";
 import ResultComponent from "./ResultComponent";
 import type { PredictResponse } from "./formcheckApi";
-import { useEffect } from "react";
 import { decodeToken } from "../../utils/decodeToken";
+import { insertUserId } from "./formcheckApi";
 
 // src/pages/DiabetesFormPage.jsx
 export function DiabetesFormPage() {
@@ -29,6 +29,22 @@ export function DiabetesFormPage() {
       localStorage.setItem("predict_result", JSON.stringify(result));
     }
   }, [result]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const user = decodeToken();
+        const saved = localStorage.getItem("predict_result");
+        const recordId = saved ? JSON.parse(saved).recordId : null;
+
+        if (user && recordId) {
+          await insertUserId(recordId);
+        }
+      } catch (err) {
+        console.error("Failed to attach userId to form check:", err);
+      }
+    })();
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>

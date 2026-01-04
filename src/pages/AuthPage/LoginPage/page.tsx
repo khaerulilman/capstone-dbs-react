@@ -21,13 +21,9 @@ function LoginPage() {
     setLoading(true);
 
     try {
-      const checkForm = localStorage.getItem("predict_result");
-      const parsedCheckForm = checkForm ? JSON.parse(checkForm) : null;
-
       const res = await LoginHandler({
         email: form.email,
         password: form.password,
-        idCheckForm: parsedCheckForm?.recordId || null,
       });
 
       if (res.data && res.data.loginResult && res.data.loginResult.token) {
@@ -198,7 +194,9 @@ function LoginPage() {
               <button
                 type="button"
                 onClick={() => {
-                  window.location.href = `${import.meta.env.VITE_MAIN_URL}/v1/auth/google`;
+                  window.location.href = `${
+                    import.meta.env.VITE_MAIN_URL
+                  }/v1/auth/google`;
                 }}
                 className="w-full flex items-center justify-center gap-2 border rounded-lg py-2 hover:bg-gray-50"
               >
