@@ -30,7 +30,6 @@ export function CheckDiabetesList({ isOpen, onSelect, refreshKey }: any) {
     const fetchHistory = async () => {
       try {
         const res = await getAllCheckHistory();
-        console.log("API response:", res.data);
 
         setData(res.data.data || res.data);
       } catch (error) {
@@ -197,22 +196,35 @@ export function DiabetesHistoryDetail({ id, onDelete }: any) {
 
 export function CheckDiabetesHistory({ onSelect, refreshKey }: any) {
   const [isDrawdownOpen, setIsDrawdownOpen] = useState<boolean>(() => {
-    const saved = localStorage.getItem("checkHistoryOpen");
-    return saved ? JSON.parse(saved) : false;
+    try {
+      const raw = localStorage.getItem("historyListOpen");
+      return raw === "true";
+    } catch (e) {
+      return false;
+    }
   });
 
-  useEffect(() => {
-    localStorage.setItem("checkHistoryOpen", JSON.stringify(isDrawdownOpen));
-  }, [isDrawdownOpen]);
+  const toggle = () => {
+    setIsDrawdownOpen((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem("historyListOpen", String(next));
+      } catch (e) {
+        // ignore storage errors
+      }
+      return next;
+    });
+  };
 
   return (
     <div className="flex flex-col gap-3 mt-2">
       <button
-        onClick={() => setIsDrawdownOpen((prev) => !prev)}
+        onClick={toggle}
         className="bg-white rounded-lg h-12 flex items-center px-4 text-black text-sm border border-gray-200 shadow-sm"
       >
         Check Diabetes History
       </button>
+
       <CheckDiabetesList
         isOpen={isDrawdownOpen}
         onSelect={onSelect}
