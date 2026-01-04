@@ -245,11 +245,16 @@ function RegisterPage() {
               <button
                 type="button"
                 onClick={() => {
-                  window.location.href = `${import.meta.env.VITE_MAIN_URL}/v1/auth/google`;
+                  window.location.href = `${
+                    import.meta.env.VITE_MAIN_URL
+                  }/v1/auth/google`;
                 }}
-                className="w-full flex items-center justify-center gap-2 border rounded-lg py-2 hover:bg-gray-50"
+                className="w-full flex items-center justify-center gap-2 rounded-lg py-2 
+             bg-neutral-900 border border-neutral-700 text-white
+             hover:bg-neutral-800 hover:border-neutral-500 hover:shadow-md
+             transition"
               >
-                <img src="/google.svg" className="w-4 h-4" />
+                <img src="/assets/images/google.png" className="w-7 h-7" />
                 Register with Google
               </button>
             </div>

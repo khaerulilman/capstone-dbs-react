@@ -30,9 +30,9 @@ export default function BacaanPage() {
         </div>
 
         {/* Faktor Risiko Diabetes */}
-        <div className="group bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20 mb-12">
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-md p-8 hover:shadow-lg transition border border-white/20 mb-12">
           <div className="flex items-center mb-6">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 shadow-md hover:shadow-lg transition">
               <svg
                 className="w-6 h-6 text-white"
                 fill="none"
@@ -94,7 +94,7 @@ export default function BacaanPage() {
         </div>
 
         {/* Faktor Komorbid */}
-        <div className="group bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20 mb-12">
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-md p-8 hover:shadow-lg transition border border-white/20 mb-12">
           <div className="flex items-center mb-6">
             <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
               <svg
@@ -140,7 +140,7 @@ export default function BacaanPage() {
         </div>
 
         {/* Faktor Gaya Hidup */}
-        <div className="group bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20">
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-md p-8 hover:shadow-lg transition border border-white/20 mb-12">
           <div className="flex items-center mb-6">
             <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
               <svg

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 
 export function Navbar() {
   const token = localStorage.getItem("token");
@@ -34,29 +34,47 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul className="flex items-center space-x-6">
-              <li id="diabetes-checked-user-container">
-                <Link
+              <li>
+                <NavLink
                   to="/diabetes-check"
-                  className="text-gray-800 hover:text-blue-600 font-medium transition-colors"
+                  className={({ isActive }) =>
+                    `font-medium transition-colors ${
+                      isActive
+                        ? "text-blue-600"
+                        : "text-gray-800 hover:text-blue-600"
+                    }`
+                  }
                 >
-                  Check diabetes
-                </Link>
+                  Check Diabetes
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/panduan-check"
-                  className="text-gray-800 hover:text-blue-600 font-medium transition-colors"
+                  className={({ isActive }) =>
+                    `font-medium transition-colors ${
+                      isActive
+                        ? "text-blue-600"
+                        : "text-gray-800 hover:text-blue-600"
+                    }`
+                  }
                 >
                   Panduan Cek
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/bacaan"
-                  className="text-gray-800 hover:text-blue-600 font-medium transition-colors"
+                  className={({ isActive }) =>
+                    `font-medium transition-colors ${
+                      isActive
+                        ? "text-blue-600"
+                        : "text-gray-800 hover:text-blue-600"
+                    }`
+                  }
                 >
                   Bacaan
-                </Link>
+                </NavLink>
               </li>
 
               {token && (
@@ -84,7 +102,7 @@ export function Navbar() {
                   <li id="login-container" className="ml-4">
                     <Link
                       to="/login"
-                      className="px-4 py-2 rounded-md font-medium text-blue-600 hover:bg-blue-50 transition-colors"
+                      className="px-4 py-2 rounded-md font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 transition-colors"
                     >
                       Login
                     </Link>

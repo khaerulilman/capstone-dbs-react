@@ -13,6 +13,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  background: transparent;
+  color: #f4f8fe;
+  opacity: 0.6;
+}
+
+/* Saat hover/focus biar sedikit kelihatan */
+input[type="number"]:hover::-webkit-inner-spin-button,
+input[type="number"]:hover::-webkit-outer-spin-button,
+input[type="number"]:focus::-webkit-inner-spin-button,
+input[type="number"]:focus::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: number-input;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -42,13 +63,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

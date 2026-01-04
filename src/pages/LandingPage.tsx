@@ -68,24 +68,11 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="container mx-auto max-w-7xl pt-16 pb-16">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                Mengapa Memilih
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Alat Kami?
-                </span>
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Teknologi terdepan untuk deteksi dini diabetes dengan akurasi
-                tinggi dan rekomendasi yang dipersonalisasi
-              </p>
-            </div>
-
+          <div className="max-w-7xl mx-auto pt-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-              <div className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out text-center transform hover:-translate-y-4">
+              <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
                 <div className="flex justify-center items-center mb-6">
-                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-3xl shadow-lg">
                     <svg
                       className="w-10 h-10 text-white"
                       fill="none"
@@ -111,9 +98,9 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out text-center transform hover:-translate-y-4">
+              <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
                 <div className="flex justify-center items-center mb-6">
-                  <div className="bg-gradient-to-br from-green-500 to-green-600 p-6 rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-gradient-to-br from-green-500 to-green-600 p-6 rounded-3xl shadow-lg">
                     <svg
                       className="w-10 h-10 text-white"
                       fill="none"
@@ -139,9 +126,9 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out text-center transform hover:-translate-y-4 md:col-span-2 lg:col-span-1">
+              <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center md:col-span-2 lg:col-span-1">
                 <div className="flex justify-center items-center mb-6">
-                  <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-3xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-3xl shadow-lg">
                     <svg
                       className="w-10 h-10 text-white"
                       fill="none"
@@ -159,11 +146,11 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
-                  Rekomendasi Personal
+                  Konsultasi dengan Dokter
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Dapatkan saran langkah preventif yang disesuaikan dengan
-                  profil kesehatan dan gaya hidup Anda.
+                  Dapatkan rekomendasi tindak lanjut dan konsultasi langsung
+                  dengan dokter berlisensi untuk penanganan yang tepat.
                 </p>
               </div>
             </div>
@@ -188,58 +175,52 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
-            <div className="relative flex flex-col items-center text-center">
-              <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full text-2xl font-bold mb-6 shadow-xl relative z-10">
-                1
-              </div>
-              <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-blue-300 to-green-300 transform translate-x-1/2 z-0"></div>
+          <div className="relative max-w-5xl mx-auto">
+            {/* Garis horizontal */}
+            <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-300 via-green-300 to-purple-300 z-0" />
 
-              <div className="bg-gradient-to-br from-blue-100 to-blue-50 p-6 rounded-2xl mb-6 shadow-lg">
-                <i className="fas fa-edit fa-3x text-blue-500 mb-4"></i>
-              </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
-                Isi Data Anda
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Lengkapi informasi dasar mengenai kesehatan, riwayat keluarga,
-                dan gaya hidup Anda dengan aman dan terenkripsi.
-              </p>
-            </div>
-
-            <div className="relative flex flex-col items-center text-center">
-              <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-full text-2xl font-bold mb-6 shadow-xl relative z-10">
-                2
-              </div>
-              <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-green-300 to-purple-300 transform translate-x-1/2 z-0"></div>
-
-              <div className="bg-gradient-to-br from-green-100 to-green-50 p-6 rounded-2xl mb-6 shadow-lg">
-                <i className="fas fa-cogs fa-3x text-green-500 mb-4"></i>
-              </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
-                Proses Analisis
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Sistem AI kami menganalisis data menggunakan algoritma machine
-                learning yang telah divalidasi secara klinis.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-full text-2xl font-bold mb-6 shadow-xl">
-                3
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 relative z-10">
+              {/* Step 1 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full text-2xl font-bold mb-6 shadow-xl">
+                  1
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
+                  Isi Data Anda
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Lengkapi informasi dasar mengenai kesehatan, riwayat keluarga,
+                  dan gaya hidup Anda dengan aman dan terenkripsi.
+                </p>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-100 to-purple-50 p-6 rounded-2xl mb-6 shadow-lg">
-                <i className="fas fa-file-alt fa-3x text-purple-500 mb-4"></i>
+              {/* Step 2 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-full text-2xl font-bold mb-6 shadow-xl">
+                  2
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
+                  Proses Analisis
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Sistem AI kami menganalisis data menggunakan algoritma machine
+                  learning yang telah divalidasi secara klinis.
+                </p>
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
-                Lihat Hasilnya
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Dapatkan laporan detail risiko diabetes beserta rekomendasi
-                tindak lanjut dan konsultasi dengan dokter.
-              </p>
+
+              {/* Step 3 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-full text-2xl font-bold mb-6 shadow-xl">
+                  3
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
+                  Lihat Hasilnya
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Dapatkan laporan detail risiko diabetes beserta rekomendasi
+                  tindak lanjut dan konsultasi dengan dokter.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -252,6 +233,7 @@ export default function LandingPage() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               Apa Kata
               <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                {" "}
                 Pengguna Kami?
               </span>
             </h2>
@@ -264,9 +246,14 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
             <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mr-4 flex items-center justify-center text-white font-bold text-xl">
-                  AR
+                <div className="w-16 h-16 rounded-full mr-4 overflow-hidden shadow-md">
+                  <img
+                    src="/assets/images/aisha.jpg"
+                    alt="Aisha R."
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+
                 <div>
                   <h4 className="font-bold text-gray-800 text-lg">Aisha R.</h4>
                   <p className="text-sm text-green-600 font-medium">
@@ -274,6 +261,7 @@ export default function LandingPage() {
                   </p>
                 </div>
               </div>
+
               <div className="flex mb-4">
                 <span className="text-yellow-400">★★★★★</span>
               </div>
@@ -286,8 +274,12 @@ export default function LandingPage() {
 
             <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full mr-4 flex items-center justify-center text-white font-bold text-xl">
-                  BS
+                <div className="w-16 h-16 rounded-full mr-4 overflow-hidden shadow-md">
+                  <img
+                    src="/assets/images/germany-man.jpg"
+                    alt="Budi S."
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-800 text-lg">Budi S.</h4>
@@ -315,8 +307,9 @@ export default function LandingPage() {
 
         <div className="container mx-auto relative z-10 max-w-4xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Jaga Kesehatan Anda,
+            Jaga Kesehatan Anda
             <span className="bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent">
+              {" "}
               Mulai Hari Ini
             </span>
           </h2>
@@ -326,7 +319,7 @@ export default function LandingPage() {
             keluarga.
           </p>
           <a
-            href="/diabetes-check"
+            href="/profile"
             className="bg-teal-500 hover:bg-teal-600 text-white hover:text-white font-semibold px-10 py-4 text-lg rounded-lg 
              transition-all duration-300 ease-in-out transform hover:scale-110 focus:outline-none focus:ring-2 
              focus:ring-teal-400 focus:ring-opacity-75"

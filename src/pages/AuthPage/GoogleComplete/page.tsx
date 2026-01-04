@@ -65,38 +65,48 @@ export default function GoogleCompletePage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-md bg-white p-6 rounded shadow">
-        <h2 className="text-black text-xl font-semibold mb-4">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="w-full max-w-md bg-white p-6 rounded-xl shadow-md border border-gray-200">
+        <h2 className="text-gray-800 text-xl font-semibold mb-4">
           Selesaikan Registrasi
         </h2>
-        {error && <div className="text-red-600 mb-3">{error}</div>}
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label className="text-black block text-sm font-medium">
+
+        {error && (
+          <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-md p-2 mb-3">
+            {error}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
               Email
             </label>
             <input
               value={email}
               disabled
-              className="w-full mt-1 p-2 border rounded bg-gray-100"
+              className="w-full mt-1 p-2 rounded-md border border-gray-300 bg-gray-100 text-gray-600 cursor-not-allowed"
             />
           </div>
-          <div className="mb-3">
-            <label className="text-black block text-sm font-medium">
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
               Nama Lengkap
             </label>
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="bg-white text-black w-full mt-1 p-2 border rounded"
+              className="w-full mt-1 p-2 rounded-md border border-gray-300 bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
+
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-2 rounded"
+            className="w-full py-2 rounded-md font-medium text-white
+                   bg-blue-600 hover:bg-blue-700 transition
+                   disabled:bg-blue-400 disabled:cursor-not-allowed"
           >
             {loading ? "Memproses..." : "Selesaikan Registrasi"}
           </button>
